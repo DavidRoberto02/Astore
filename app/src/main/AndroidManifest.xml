@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.proyectoempresarial">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Productos"></activity>
+        <activity android:name=".recuperarContrasena"></activity>
+        <activity android:name=".Productos" />
         <activity android:name=".Clientes" />
         <activity android:name=".Tickets" />
         <activity android:name=".funciones" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".recuperarContrasena">
 
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="220dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="SIGN IN"
+        android:text="Recuperar cuenta"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="30sp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/correo"
+        android:id="@+id/email"
         android:layout_width="339dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -40,72 +40,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title" />
 
-    <EditText
-        android:id="@+id/contraseña"
-        android:layout_width="337dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:hint="Contraseña:"
-        android:drawableLeft="@drawable/look"
-        android:inputType="textPassword"
-        android:textColorHint="#312E2E"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correo" />
 
     <Button
         android:id="@+id/recuperar"
-        android:layout_width="147dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:onClick="registroUsuario"
-        android:text="Registrar"
+        android:layout_width="274dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:onClick="recuperar"
+        android:text="Recuperar"
         android:textColor="#FFFFFF"
         app:backgroundTint="#14213D"
-        app:layout_constraintEnd_toStartOf="@+id/iniciar_Sesion"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contraseña" />
-
-    <Button
-        android:id="@+id/iniciar_Sesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:onClick="navegarFunciones"
-        android:text="Iniciar sesión"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="#00B4D8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/recuperar"
-        app:layout_constraintTop_toBottomOf="@+id/contraseña" />
-
-    <TextView
-        android:id="@+id/olvidasteContraseña"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="39dp"
-        android:layout_marginRight="39dp"
-        android:onClick="recuperarCuenta"
-        android:text="¿Olvidaste tu contraseña?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recuperar" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -138,5 +85,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="322dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginLeft="149dp"
+        android:layout_marginTop="12dp"
+        android:text="Para recuperar su cuenta ingrese su correo."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.example.proyectoempresarial;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -54,11 +55,22 @@ public class Clientes extends AppCompatActivity {
         elements.add(new listaClientes("Ileana", "#009688"));
 
 
-        ListAdapter listAdapter = new ListAdapter(elements, this);
+        ListAdapter listAdapter = new ListAdapter(elements, this, new ListAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(listaClientes item) {
+                moveToDescription(item);
+            }
+        });
         RecyclerView recyclerView = findViewById(R.id.listRecyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(listAdapter);
+    }
+
+    public void moveToDescription(listaClientes item) {
+        Intent intent = new Intent(this, descriptionActivity.class);
+        intent.putExtra("listaClientes", item);
+        startActivity(intent);
     }
 
 

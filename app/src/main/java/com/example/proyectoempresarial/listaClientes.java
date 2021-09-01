@@ -1,6 +1,8 @@
 package com.example.proyectoempresarial;
 
-public class listaClientes {
+import java.io.Serializable;
+
+public class listaClientes implements Serializable {
     public String nombre;
     public String color;
 

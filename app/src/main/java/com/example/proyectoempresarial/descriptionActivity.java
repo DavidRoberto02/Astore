@@ -20,6 +20,6 @@ public class descriptionActivity extends AppCompatActivity {
         clienteTextView = findViewById(R.id.clienteTextView);
 
         clienteTextView.setText(listaClientes.getNombre());
-        clienteTextView.setTextColor(Color.parseColor(listaClientes.getColor()));
+        //clienteTextView.setTextColor(Color.parseColor(listaClientes.getColor()));
     }
 }

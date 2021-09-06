@@ -1,8 +1,6 @@
 package com.example.proyectoempresarial;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +11,8 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
@@ -21,24 +21,31 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private Context context;
     final ListAdapter.OnItemClickListener listener;
 
+
+
     public interface OnItemClickListener {
         void onItemClick(listaClientes item);
     }
 
-    public ListAdapter(List<listaClientes> itemList, Context context, ListAdapter.OnItemClickListener listener) {
+    public ListAdapter(List<listaClientes> itemList, Context context,
+                       ListAdapter.OnItemClickListener listener) {
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.mData = itemList;
         this.listener = listener;
 
+
+
     }
 
     @Override
-    public int getItemCount() {return mData.size();}
+    public int getItemCount() {
+        return mData.size();
+    }
 
 
     @Override
-    public ListAdapter.ViewHolder onCreateViewHolder (ViewGroup parent, int viewType) {
+    public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.from(parent.getContext()).inflate(R.layout.list_clientes, parent, false);
         return new ListAdapter.ViewHolder(view);
 
@@ -50,7 +57,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         holder.cv.setAnimation(AnimationUtils.loadAnimation(context, R.anim.transicion_clientes));
     }
 
-    public void setItems(List<listaClientes> items) {mData = items;}
+    public void setItems(List<listaClientes> items) {
+        mData = items;
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView iconImageView;
@@ -63,8 +72,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             nombre = itemView.findViewById(R.id.nombre);
             cv = itemView.findViewById(R.id.cv);
         }
+
         void bindData(final listaClientes item) {
-            iconImageView.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
             nombre.setText(item.getNombre());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -4,12 +4,9 @@ import java.io.Serializable;
 
 public class listaClientes implements Serializable {
     public String nombre;
-    public String color;
 
-
-    public listaClientes(String nombre, String color) {
+    public listaClientes(String nombre) {
         this.nombre = nombre;
-        this.color = color;
     }
 
     public String getNombre() {
@@ -18,14 +15,6 @@ public class listaClientes implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 }
 

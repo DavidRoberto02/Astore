@@ -11,4 +11,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_funciones_app">Funciones_app</string>
     <string name="title_activity_funciones">funciones</string>
+    <string name="hint_pick_up_date">dd/mm/yyyy</string>
 </resources>

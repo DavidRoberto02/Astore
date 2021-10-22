@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proyecto Empresarial</string>
+    <string name="app_name">Astore</string>
     <string name="title_activity_funciones_aplicacion">Funciones_aplicacion</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

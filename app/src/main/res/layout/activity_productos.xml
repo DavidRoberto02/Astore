@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/codigoDeBarras"
         android:layout_width="348dp"
         android:layout_height="42dp"
         android:layout_marginStart="31dp"
@@ -63,10 +63,10 @@
         android:fontFamily="@font/roboto_bold"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/codigoDeBarras" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/nombreProducto"
         android:layout_width="348dp"
         android:layout_height="42dp"
         android:layout_marginStart="31dp"
@@ -91,10 +91,10 @@
         android:fontFamily="@font/roboto_bold"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreProducto" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/precioProducto"
         android:layout_width="348dp"
         android:layout_height="42dp"
         android:layout_marginStart="31dp"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/guardarProducto"
         android:layout_width="169dp"
         android:layout_height="42dp"
         android:layout_marginStart="31dp"
@@ -121,50 +121,32 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+        app:layout_constraintTop_toBottomOf="@+id/precioProducto" />
+
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="154dp"
+        android:id="@+id/eliminarProducto"
+        android:layout_width="350dp"
         android:layout_height="42dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:background="#00B4D8"
-        android:text="Modificar"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="348dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:background="#FFB703"
+        android:background="#E91E1E"
         android:text="Eliminar producto"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/guardarProducto" />
 
-    <SearchView
-        android:layout_width="348dp"
+    <Button
+        android:id="@+id/consultarProducto"
+        android:layout_width="154dp"
         android:layout_height="42dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="31dp"
-        android:layout_marginRight="31dp"
-        android:background="@drawable/bordes_redondos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        android:background="#FFB703"
+        android:text="Buscar producto"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/guardarProducto"
+        app:layout_constraintTop_toBottomOf="@+id/precioProducto" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

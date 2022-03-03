@@ -1,17 +1,14 @@
 package com.example.proyectoempresarial;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
-import com.google.android.material.textfield.TextInputEditText;
-
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -28,15 +25,15 @@ public class registrarCliente extends AppCompatActivity {
         nombreCliente = (TextInputEditText) findViewById(R.id.nombreCliente);
         registroNumero = (TextInputEditText) findViewById(R.id.registroNumero);
         registroDireccion = (TextInputEditText) findViewById(R.id.registroDireccion);
-        guardarCliente = (Button)  findViewById(R.id.guardarCliente);
+        guardarCliente = (Button) findViewById(R.id.guardarCliente);
         mostrarCliente = (Button) findViewById(R.id.mostrarCliente);
         guardarCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(nombreCliente.getText().toString().equals("") || registroDireccion.getText().toString().equals("") ||
-                        registroNumero.getText().toString().equals("")){
+                if (nombreCliente.getText().toString().equals("") || registroDireccion.getText().toString().equals("") ||
+                        registroNumero.getText().toString().equals("")) {
                     validarCliente();
-                }else{
+                } else {
                     GuardarDatos(v);
                     limpiarTextos();
                     Toast.makeText(registrarCliente.this, "Datos Registrados", Toast.LENGTH_SHORT).show();
@@ -48,7 +45,7 @@ public class registrarCliente extends AppCompatActivity {
         mostrarCliente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(registrarCliente.this, Clientes.class);
+                Intent intent = new Intent(registrarCliente.this, Clientes.class);
                 startActivity(intent);
                 Toast.makeText(registrarCliente.this, "Clientes Mostrados", Toast.LENGTH_SHORT).show();
                 overridePendingTransition(R.anim.zoom_back_in, R.anim.zoom_back_out);
